@@ -1,7 +1,13 @@
 <div>
-    <p>This is the partial for view 1MAX.</p>
-    <div ng-repeat="repo in repos">{{repo.name}}
-        <button ng-click="showRepo(repo.name)">Open</button>
-    </div>
+    <ul class="list-group" ng-repeat="repo in repos">
+        <li class="list-group-item">
+            <div>
+                <span class="repo-name">{{repo.name}}</span>
+                <span>{{repo.description}}</span>
+                <button ng-click="showRepo(repo.name)">Open</button>
+            </div>
+        </li>
+
+    </ul>
 </div>
 
