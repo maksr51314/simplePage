@@ -1,4 +1,4 @@
-# angular-seed — the seed for AngularJS apps
+# simple app
 just run
 
 npm i
