@@ -9,7 +9,7 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', ["$scope", '$http', function($scope, $http) {
+.controller('View1Ctrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
   var requestPromise;
   //TODO : define loading
   $scope.loading = true;
@@ -25,6 +25,12 @@ angular.module('myApp.view1', ['ngRoute'])
   }, function errorCallback(response) {
     //TODO : add error handler
   });
+
+  $scope.showRepo = function (repoName) {
+
+    $location.path('/view2:' + repoName);
+
+  }
 
 
 }]);
